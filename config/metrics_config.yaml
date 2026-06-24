@@ -1,0 +1,40 @@
+# AI Prompt Evaluation Framework Configuration
+
+metrics:
+  factual_accuracy:
+    weight: 0.25
+    threshold: 3.5
+    method: "semantic_similarity"
+
+  hallucination_severity:
+    weight: 0.20
+    threshold: 2.0
+    method: "semantic_drift"
+
+  reasoning_depth:
+    weight: 0.15
+    threshold: 3.0
+    method: "linguistic_analysis"
+
+  instruction_compliance:
+    weight: 0.20
+    threshold: 3.5
+    method: "instruction_parsing"
+
+  coherence:
+    weight: 0.10
+    threshold: 3.5
+    method: "sentence_similarity"
+
+  safety:
+    weight: 0.10
+    threshold: 4.0
+    method: "pattern_matching"
+
+batch_processing:
+  batch_size: 50
+  parallel_workers: 4
+  output_formats:
+    - json
+    - markdown
+    - summary
